@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #b384ff;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      margin: 20px;
+    }
+    .main-content {
+      background-color: #eddfff;
+      padding: 20px;
+    }
+    .barra {
+      background-color: #caa6e7;
+      padding: 20px;
+    }
+    .footer {
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Layout con Grid</h1>
+  </header>
+
+  <div class="container">
+    <div class="barra">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias itaque laborum non excepturi animi a sequi ad, tenetur ipsum fuga aspernatur beatae vero provident molestiae, quisquam praesentium eligendi distinctio. Autem.</p>
+    </div>
+    <div class="main-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolor quisquam nihil. Ducimus aliquid, in dignissimos praesentium ipsum doloribus nostrum laborum iste accusantium ea, quo quis necessitatibus temporibus dolorem placeat!</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+        <p>2025 Hodi.</p>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+    </div>
+  </footer>
+</body>
+</html>

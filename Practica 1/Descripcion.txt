@@ -1,0 +1,5 @@
+En HTML, los layouts más utilizados son aquellos que permiten organizar y presentar el contenido de manera estructurada. Y algunos más comunes son:
+1º Layout de una sola columna: Básico para páginas simples.
+2º Layout de varias columnas: Utiliza contenedores para crear un diseño con columnas (por ejemplo, una columna principal y una barra lateral).
+3º Layout con cabecera y pie de página fijos: Con un encabezado y pie que se mantienen fijos al hacer scroll.
+4º Layout con Grid: Usando CSS Grid para crear una estructura flexible y moderna.

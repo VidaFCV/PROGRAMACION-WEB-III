@@ -1,0 +1,26 @@
+Este archivo contiene la implementación de tres métodos diferentes para establecer una conexión con una base de datos MySQL usando el paquete mysql2 en Node.js. A continuación, se detallan las tres formas utilizadas para realizar la conexión, junto con un análisis de los tiempos de ejecución:
+
+    1. Conexión Básica: Utiliza la función mysql.createConnection para establecer una conexión directa con la base de datos. 
+       - Esta es la forma más sencilla y directa, pero no es la más eficiente cuando se manejan múltiples consultas, ya que no reutiliza las conexiones.
+    
+    2. Conexión con Promesas: Emplea la versión basada en promesas de la API de mysql2, permitiendo escribir código más limpio y fácil de manejar con async/await.
+       - Este método mejora la legibilidad y el manejo de errores, pero tiene una ligera sobrecarga debido a la naturaleza asíncrona.
+    
+    3. Conexión con Pooling: Utiliza un "pool" de conexiones para manejar múltiples conexiones simultáneas a la base de datos. 
+       - Es ideal para aplicaciones con alta concurrencia, ya que reutiliza las conexiones en lugar de crear nuevas cada vez.
+
+    Resultados obtenidos:
+    Los tiempos de ejecución mostrados a continuación indican cuánto tiempo tomó cada tipo de conexión para realizar una consulta simple (SELECT * FROM users) a la base de datos. Los resultados pueden variar dependiendo de la configuración de la base de datos y las condiciones del entorno de ejecución.
+
+    | Método de Conexión    | Tiempo de Ejecución |
+    |-----------------------|---------------------|
+    | Conexión básica        | 118.599 ms          |
+    | Conexión con Promesas  | 214.490 ms          |
+    | Conexión con Pooling   | 146.264 ms          |
+
+    A partir de los resultados, se puede observar que la "conexión básica" tiene el mejor tiempo de ejecución en esta prueba específica. Sin embargo, la "conexión con Pooling" es la mejor opción a largo plazo para aplicaciones con muchas consultas concurrentes, ya que optimiza el uso de conexiones a la base de datos.
+
+    Conclusión:
+    - Para tareas simples con pocas consultas, la "conexión básica" es adecuada.
+    - Para aplicaciones más complejas, donde se manejan muchas consultas simultáneas, el uso de "pooling" es la opción más eficiente.
+    - El uso de "promesas" mejora la legibilidad y el manejo de errores, pero puede implicar un leve aumento en el tiempo de ejecución.
